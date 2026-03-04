@@ -21,7 +21,7 @@
 
       <div class="btn-row">
   
-        <a class="btn" href="#cv">CV</a>
+        <a class="btn" href="#cv">Resume</a>
         <a class="btn" href="https://github.com/memahre/" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/morgan-mahre" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:momahre@gmail.com">Email</a>
@@ -51,7 +51,7 @@
       <h2 class="subtitle">Computational Social Science | Behavioral Science × AI</h2>
 
       <p class="lead">
-        Studying human behavior through data, statistical modeling, and machine learning.
+        Studying human behavior through data, statistical modeling, and machine learning. 
         I’m focused on industry roles where behavioral insight and rigorous analytics support real-world decisions.
       </p>
 
@@ -76,6 +76,8 @@
 
       <p>
         I am a Computational Social Science M.S. student at the University of California, San Diego (expected June 2026) with a background in psychology and communication (Santa Clara University, 2020).
+        I am developing stronger technical skills in statistical computing and machine learning, with interests in model evaluation and human-centered applications of AI.
+        I am particularly interested in how AI systems represent and respond to human-relevant concepts, and how evaluation choices shape conclusions about model behavior.
         I’m interested in understanding human behavior using data analysis, statistical modeling, and machine learning, and I’m especially drawn to questions at the intersection of behavioral science and AI.
       </p>
 
@@ -87,13 +89,12 @@
         <h3>CV</h3>
         <div class="embed">
           <iframe
-            src=https://docs.google.com/document/d/1uOGEmRR3zwi6OzMEDbgKimPE_AAajsm2K1XIyeIkwZA/edit?tab=t.fvykcxg4bkvx
+            src=https://docs.google.com/document/d/1uOGEmRR3zwi6OzMEDbgKimPE_AAajsm2K1XIyeIkwZA/edit?tab=t.fvykcxg4bkvx/preview 
             width="100%"
             height="650"
             allow="autoplay">
           </iframe>
         </div>
-        -->
       </div>
     </section>
 
@@ -102,60 +103,50 @@
       <h1>Research</h1>
 
       <p class="small">
-        This section highlights academic work and research interests relevant to industry roles (behavioral data, measurement, and AI evaluation). I add links to write-ups/code as projects become public.
       </p>
 
-      <div class="subsection">
-        <h3>Communication & Health Behavior Research (Undergraduate)</h3>
-        <div class="card">
-          <div class="card-title">Strategic Health Campaigns — Research Project</div>
-          <p>
-            This project examined how communication factors relate to health-related attitudes and behaviors.
-            The study used pre- and post-test survey data (approximately 500 students) to evaluate changes associated with a behavioral communication intervention.
-          </p>
-          <ul>
-            <li><strong>Methods:</strong> study design, variable construction, quantitative analysis, interpretation using behavioral change theory</li>
-            <li><strong>What it shows:</strong> ability to connect theory → measurement → quantitative evidence and communicate findings clearly</li>
-          </ul>
-          <div class="meta">
-            <span class="pill">Survey research</span>
-            <span class="pill">Behavioral theory</span>
-            <span class="pill">Quantitative analysis</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="subsection">
-        <h3>Graduate Research Interests (UC San Diego)</h3>
-        <div class="card">
-          <div class="card-title">Human behavior + machine learning</div>
-          <p>
-            In graduate school, I am developing stronger technical skills in statistical computing and machine learning, with interests in model evaluation and human-centered applications of AI.
-            I am particularly interested in how AI systems represent and respond to human-relevant concepts, and how evaluation choices shape conclusions about model behavior.
-          </p>
-          <ul>
-            <li><strong>Methods exposure:</strong> statistical inference, modeling, ML evaluation, and interpretability concepts through coursework</li>
-            <li><strong>What it shows:</strong> growing technical depth and a clear trajectory toward applied behavioral ML roles</li>
-          </ul>
-          <div class="meta">
-            <span class="pill">ML evaluation</span>
-            <span class="pill">Interpretability</span>
-            <span class="pill">Behavioral data</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section">
-      <h1>Portfolio</h1>
-
-      <p class="small">
-        Industry-style case studies (problem → data → method → outcome). I’m actively expanding this section with public write-ups and code links.
-      </p>
-
+   
       <div class="card">
-        <div class="card-title">Case Study: Communication & Health Behavior (Survey Evaluation)</div>
+      <div class="card-title"> Multimodal Model Evaluation and Interpretability </div>
+        <div class="two-col">
+          <div>
+            <h4>Problem</h4>
+            <p>
+              Language to vision and language to image models have been researched, but an underexplored area is the direct comparison of audition and vision models to analyze representational alignment. 
+        </p>
+            <h4>Data</h4>
+            <p>
+              AudioCaps2.0 dataset 
+            </p>
+          </div>
+
+          <div>
+            <h4>Method</h4>
+            <p>
+              Utilize the matching audio and text captions to generate matching images with stable diffusion. Extract the embeddings for image and audio to run through respective foundation model (BEATs, DINOvs) to then use similarity analysis (CKA, RSA) to compare representational similarity across modalities.
+            </p>
+
+            <h4>Outcome</h4>
+            <p>
+             In progress
+            </p>
+          </div>
+        </div>
+
+        <div class="meta">
+          <span class="pill">Python</span>
+          <span class="pill">Pytorch</span>
+          <span class="pill">DINOv2</span>
+          <span class="pill">BEATs</span>
+          <span class="pill">Hugging Face</span>
+          <span class="pill">Diffusion Models</span>
+          <span class="pill">Representational Alignment</span>
+
+
+        </div>
+      </div>
+<div class="card">
+        <div class="card-title"> Communication & Health Behavior (Survey Evaluation) </div>
         <div class="two-col">
           <div>
             <h4>Problem</h4>
@@ -173,50 +164,27 @@
           <div>
             <h4>Method</h4>
             <p>
-              Study design and variable construction; quantitative analysis of behavioral and communication measures;
-              interpretation using behavioral change theories.
+              Study design and variable construction, use quantitative analysis of behavioral and communication measures using SPSS and R, and interpret results using behavioral change theories.
             </p>
 
             <h4>Outcome</h4>
             <p>
-              Produced a research-driven evaluation of patterns in survey responses and connected results back to behavioral theory.
-              (Public artifacts forthcoming.)
+              Produced a research-driven evaluation of patterns in survey responses and connected results back to behavioral theory. Received a significant positive outcome. 
             </p>
           </div>
         </div>
 
         <div class="meta">
-          <span class="pill">SPSS/R (as applicable)</span>
-          <span class="pill">Quant analysis</span>
+          <span class="pill">SPSS/R </span>
+          <span class="pill">Quantitative analysis</span>
           <span class="pill">Applied behavioral science</span>
+          <span class="pill">Survey design</span>
+          <span class="pill">Behavioral theory</span>
+	
         </div>
+       </section>
 
-        <div class="links">
-          <!-- Add links when ready -->
-          <span class="small muted">Links: add PDF / slides / repo when available</span>
-        </div>
-      </div>
 
-      <div class="card">
-        <div class="card-title">In Progress: Graduate Projects (UCSD)</div>
-        <p>
-          I’m currently building portfolio-ready projects from graduate coursework and research training, including applied data workflows, modeling, and evaluation.
-          As these become public, I’ll link code, write-ups, and results here.
-        </p>
-        <ul>
-          <li><strong>Focus areas:</strong> machine learning evaluation, statistical modeling, reproducible analysis workflows</li>
-          <li><strong>Tools:</strong> Python, R, SQL, Git/GitHub</li>
-        </ul>
-        <div class="meta">
-          <span class="pill">Python</span>
-          <span class="pill">R</span>
-          <span class="pill">SQL</span>
-          <span class="pill">GitHub</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
     <section id="skills" class="section">
       <h1>Skills & Tools</h1>
 
@@ -227,7 +195,7 @@
             <li>Python, R, SQL</li>
             <li>Data cleaning & wrangling</li>
             <li>EDA & visualization</li>
-            <li>Reproducible workflows (Git/GitHub)</li>
+            <li>Reproducible workflows </li>
           </ul>
         </div>
 
@@ -235,8 +203,8 @@
           <div class="skill-title">Machine Learning</div>
           <ul>
             <li>Model evaluation concepts</li>
-            <li>Neural network methods (coursework exposure)</li>
-            <li>Interpretability concepts (coursework exposure)</li>
+            <li>Neural network methods </li>
+            <li>Interpretability concepts </li>
           </ul>
         </div>
 
@@ -254,8 +222,7 @@
           <ul>
             <li>Git/GitHub</li>
             <li>Tableau</li>
-            <li>SPSS (prior experience)</li>
-            <li>Jupyter / notebooks</li>
+            <li>SPSS </li>
           </ul>
         </div>
       </div>
@@ -282,3 +249,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
