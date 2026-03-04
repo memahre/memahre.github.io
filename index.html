@@ -75,21 +75,20 @@
       <h1>About</h1>
 
       <p>
-        I am a Computational Social Science M.S. student at the University of California, San Diego (expected June 2026) with a background in psychology and communication (Santa Clara University, 2020).
-        I am developing stronger technical skills in statistical computing and machine learning, with interests in model evaluation and human-centered applications of AI.
-        I am particularly interested in how AI systems represent and respond to human-relevant concepts, and how evaluation choices shape conclusions about model behavior.
-        I’m interested in understanding human behavior using data analysis, statistical modeling, and machine learning, and I’m especially drawn to questions at the intersection of behavioral science and AI.
+        I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of behavioral science and artificial intelligence, where I use machine learning, statistical modeling, and experimental methods to analyze AI systems and investigate questions in cognitive and behavioral science.
+        
+		My research focuses on model evaluation and human-centered applications of AI. I am particularly interested in how evaluation frameworks shape our understanding of model behavior and how insights from behavioral science can inform the design and analysis of ethical, societally impactful intelligent systems.
       </p>
 
       <p>
         My work is motivated by practical impact: turning messy human data into clear insights that can inform decisions, improve systems, and support human-centered technology.
       </p>
 
-      <div id="cv" class="subsection">
-        <h3>CV</h3>
+      <div id="resume" class="subsection">
+        <h3>Resume</h3>
         <div class="embed">
           <iframe
-            src=https://docs.google.com/document/d/1uOGEmRR3zwi6OzMEDbgKimPE_AAajsm2K1XIyeIkwZA/edit?tab=t.fvykcxg4bkvx/preview 
+            src=https://docs.google.com/document/d/1uOGEmRR3zwi6OzMEDbgKimPE_AAajsm2K1XIyeIkwZA/edit?tab=t.70pz5hokgtus
             width="100%"
             height="650"
             allow="autoplay">
@@ -112,18 +111,18 @@
           <div>
             <h4>Problem</h4>
             <p>
-              Language to vision and language to image models have been researched, but an underexplored area is the direct comparison of audition and vision models to analyze representational alignment. 
+              While substantial research has examined language–vision and language–image model alignment, far less work has directly compared models trained on auditory and visual modalities. This project investigates how vision and audio foundation models represent semantic information and whether their internal representations align across modalities.
         </p>
             <h4>Data</h4>
             <p>
-              AudioCaps2.0 dataset 
+              Constructed a controlled multimodal dataset using audio clips and captions from the AudioCaps dataset. Corresponding images were generated with Stable Diffusion to ensure consistent semantic content across audio and visual inputs, enabling direct comparison of representations across modalities. 
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Utilize the matching audio and text captions to generate matching images with stable diffusion. Extract the embeddings for image and audio to run through respective foundation model (BEATs, DINOvs) to then use similarity analysis (CKA, RSA) to compare representational similarity across modalities.
+              Extract embeddings from audio and image inputs using pretrained foundation models (BEATs for audio and DINOv2 for vision). Apply representation similarity metrics, including Centered Kernel Alignment (CKA) and Representational Similarity Analysis (RSA), to analyze cross-modal embedding geometry and measure representational alignment across layers and model architectures. 
             </p>
 
             <h4>Outcome</h4>
@@ -146,30 +145,30 @@
         </div>
       </div>
 <div class="card">
-        <div class="card-title"> Communication & Health Behavior (Survey Evaluation) </div>
+        <div class="card-title"> Strategic Communication Health Campaign On College Campus </div>
         <div class="two-col">
           <div>
             <h4>Problem</h4>
             <p>
               Health behaviors are shaped not only by individual psychology, but also by how information is communicated.
-              This project evaluated how communication and behavioral theory–informed messaging related to changes in health attitudes/behaviors.
+              This project examined how strategic communication and behavioral change theory could be used to improve health knowledge and engagement among undergraduate students at Santa Clara University.
             </p>
 
             <h4>Data</h4>
             <p>
-              Pre- and post-test survey data from approximately 500 students.
+              Pre- and post-intervention survey data collected from approximately 500 undergraduate students during a campus-wide strategic health campaign. The project also used prior data from the American College Health Association to identify key health challenges facing the university population and define the target audience for the intervention.
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Study design and variable construction, use quantitative analysis of behavioral and communication measures using SPSS and R, and interpret results using behavioral change theories.
+              Designed and implemented a campus-wide health communication campaign informed by behavioral change theory. Developed educational resources and presented health information to students. Campaign impact was evaluated using pre- and post-test survey measures and statistical analysis conducted in SPSS.
             </p>
 
             <h4>Outcome</h4>
             <p>
-              Produced a research-driven evaluation of patterns in survey responses and connected results back to behavioral theory. Received a significant positive outcome. 
+              Statistical analysis of the survey data showed a significant positive increase in health knowledge among participating students. The project demonstrated how theory-informed communication strategies can improve the effectiveness of campus health initiatives and provided actionable insights for future student wellness programming. 
             </p>
           </div>
         </div>
@@ -190,7 +189,7 @@
 
       <div class="skills-grid">
         <div class="skill-card">
-          <div class="skill-title">Programming & Data</div>
+          <div class="skill-title">Programming</div>
           <ul>
             <li>Python, R, SQL</li>
             <li>Data cleaning & wrangling</li>
@@ -202,18 +201,25 @@
         <div class="skill-card">
           <div class="skill-title">Machine Learning</div>
           <ul>
-            <li>Model evaluation concepts</li>
-            <li>Neural network methods </li>
+            <li>Model evaluation</li>
+            <li>Neural networks</li>
             <li>Interpretability concepts </li>
+			<li>Transformer architectures </li>
+			<li>Embedding analysis</li>
+			<li>Multimodal models</li>
+
+
           </ul>
         </div>
 
         <div class="skill-card">
           <div class="skill-title">Research & Methods</div>
           <ul>
-            <li>Study design & measurement</li>
-            <li>Statistical modeling & inference</li>
-            <li>Behavioral theory → empirical analysis</li>
+            <li>Statistical modeling</li>
+            <li>Regression</li>
+            <li>Experimental design</li>
+			<li>Causal inference</li>
+			<li>Hypothesis testing</li>
           </ul>
         </div>
 
