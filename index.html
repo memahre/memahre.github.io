@@ -20,8 +20,7 @@
       <div class="tagline">Computational Social Science</div>
 
       <div class="btn-row">
-  
-        <a class="btn" href="#cv">Resume</a>
+        <a class="btn" href="#resume">Resume</a>
         <a class="btn" href="https://github.com/memahre/" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/morgan-mahre" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:momahre@gmail.com">Email</a>
@@ -32,17 +31,10 @@
       <a class="nav-link" href="#home">HOME</a>
       <a class="nav-link" href="#about">ABOUT</a>
       <a class="nav-link" href="#research">RESEARCH</a>
-      <a class="nav-link" href="#portfolio">PORTFOLIO</a>
       <a class="nav-link" href="#skills">SKILLS</a>
       <a class="nav-link" href="#contact">CONTACT</a>
     </nav>
 
-    <div class="sidebar-footer">
-      <div class="small">
-        San Diego, CA • Expected M.S. Jun 2026
-      </div>
-    </div>
-  </aside>
 
   <main class="content">
     <!-- HOME -->
@@ -51,17 +43,11 @@
       <h2 class="subtitle">Computational Social Science | Behavioral Science × AI</h2>
 
       <p class="lead">
-        Studying human behavior through data, statistical modeling, and machine learning. 
+        Studying human behavior through data, statistical modeling, and machine learning.
         I’m focused on industry roles where behavioral insight and rigorous analytics support real-world decisions.
       </p>
 
       <div class="callouts">
-        <div class="callout">
-          <div class="callout-title">Current focus</div>
-          <div class="callout-text">
-            Building end-to-end analysis workflows (data → modeling → evaluation → communication) and developing a portfolio of applied projects from graduate coursework and research.
-          </div>
-        </div>
         <div class="callout">
           <div class="callout-title">Interests</div>
           <div class="callout-text">
@@ -71,13 +57,16 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
       <h1>About</h1>
 
       <p>
         I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of behavioral science and artificial intelligence, where I use machine learning, statistical modeling, and experimental methods to analyze AI systems and investigate questions in cognitive and behavioral science.
-        
-		My research focuses on model evaluation and human-centered applications of AI. I am particularly interested in how evaluation frameworks shape our understanding of model behavior and how insights from behavioral science can inform the design and analysis of ethical, societally impactful intelligent systems.
+      </p>
+
+      <p>
+        My research focuses on model evaluation and human-centered applications of AI. I am particularly interested in how evaluation frameworks shape our understanding of model behavior and how insights from behavioral science can inform the design and analysis of ethical, societally impactful intelligent systems.
       </p>
 
       <p>
@@ -86,102 +75,96 @@
 
       <div id="resume" class="subsection">
         <h3>Resume</h3>
-        <div class="embed">
-          <iframe
-            
-            width="100%"
-            height="650"
-            allow="autoplay">
-          </iframe>
+        <p class="small">
+        <div class="btn-row-inline" style="margin-top: 10px;">
+          <a class="btn btn-inline" href="resume.pdf" target="_blank" rel="noopener">Download PDF</a>
         </div>
       </div>
     </section>
 
-    <!-- RESEARCH -->
+   
     <section id="research" class="section">
       <h1>Research</h1>
 
-      <p class="small">
-      </p>
-
-   
       <div class="card">
-      <div class="card-title"> Multimodal Model Evaluation and Interpretability </div>
+        <div class="card-title">Multimodal Model Evaluation and Interpretability</div>
+
         <div class="two-col">
           <div>
-            <h4>Problem</h4>
+            <h4>Description</h4>
             <p>
               While substantial research has examined language–vision and language–image model alignment, far less work has directly compared models trained on auditory and visual modalities. This project investigates how vision and audio foundation models represent semantic information and whether their internal representations align across modalities.
-        </p>
+            </p>
+
             <h4>Data</h4>
             <p>
-              Constructed a controlled multimodal dataset using audio clips and captions from the AudioCaps dataset. Corresponding images were generated with Stable Diffusion to ensure consistent semantic content across audio and visual inputs, enabling direct comparison of representations across modalities. 
+              Constructed a controlled multimodal dataset using audio clips and captions from the AudioCaps dataset. Corresponding images were generated with Stable Diffusion to ensure consistent semantic content across audio and visual inputs, enabling direct comparison of representations across modalities.
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Extract embeddings from audio and image inputs using pretrained foundation models (BEATs for audio and DINOv2 for vision). Apply representation similarity metrics, including Centered Kernel Alignment (CKA) and Representational Similarity Analysis (RSA), to analyze cross-modal embedding geometry and measure representational alignment across layers and model architectures. 
+              Extract embeddings from audio and image inputs using pretrained foundation models (BEATs for audio and DINOv2 for vision). Apply representation similarity metrics, including Centered Kernel Alignment (CKA) and Representational Similarity Analysis (RSA), to analyze cross-modal embedding geometry and measure representational alignment across layers and model architectures.
             </p>
 
             <h4>Outcome</h4>
             <p>
-             In progress
+              In progress.
             </p>
           </div>
         </div>
 
         <div class="meta">
           <span class="pill">Python</span>
-          <span class="pill">Pytorch</span>
+          <span class="pill">PyTorch</span>
           <span class="pill">DINOv2</span>
           <span class="pill">BEATs</span>
           <span class="pill">Hugging Face</span>
           <span class="pill">Diffusion Models</span>
-          <span class="pill">Representational Alignment</span>
-
-
+          <span class="pill">CKA</span>
+          <span class="pill">RSA</span>
         </div>
       </div>
-<div class="card">
-        <div class="card-title"> Strategic Communication Health Campaign On College Campus </div>
+
+      <div class="card">
+        <div class="card-title">Strategic Communication Health Campaign on a College Campus</div>
+
         <div class="two-col">
           <div>
-            <h4>Problem</h4>
+            <h4>Description</h4>
             <p>
-              Health behaviors are shaped not only by individual psychology, but also by how information is communicated.
               This project examined how strategic communication and behavioral change theory could be used to improve health knowledge and engagement among undergraduate students at Santa Clara University.
             </p>
 
             <h4>Data</h4>
             <p>
-              Pre- and post-intervention survey data collected from approximately 500 undergraduate students during a campus-wide strategic health campaign. The project also used prior data from the American College Health Association to identify key health challenges facing the university population and define the target audience for the intervention.
+              Pre- and post-intervention survey data collected from approximately 400 undergraduate students during a campus-wide strategic health campaign. The project also used prior American College Health Association (ACHA) data to identify major campus health challenges and define the target audience for the intervention.
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Designed and implemented a campus-wide health communication campaign informed by behavioral change theory. Developed educational resources and presented health information to students. Campaign impact was evaluated using pre- and post-test survey measures and statistical analysis conducted in SPSS.
+              Designed and implemented a campus-wide health communication campaign informed by behavioral change theory. Developed educational resources, presented health information to students, and created a pathway for the Wellness Center to connect with the student body. Campaign impact was evaluated using pre- and post-test survey measures and statistical analysis conducted in SPSS.
             </p>
 
             <h4>Outcome</h4>
             <p>
-              Statistical analysis of the survey data showed a significant positive increase in health knowledge among participating students. The project demonstrated how theory-informed communication strategies can improve the effectiveness of campus health initiatives and provided actionable insights for future student wellness programming. 
+              Statistical analysis showed a significant positive increase in health knowledge among participating students. The work provided actionable insights for future student wellness programming.
             </p>
           </div>
         </div>
 
         <div class="meta">
-          <span class="pill">SPSS/R </span>
-          <span class="pill">Quantitative analysis</span>
-          <span class="pill">Applied behavioral science</span>
-          <span class="pill">Survey design</span>
-          <span class="pill">Behavioral theory</span>
-	
+          <span class="pill">SPSS</span>
+          <span class="pill">Survey Research</span>
+          <span class="pill">Quantitative Analysis</span>
+          <span class="pill">Behavior Change Theory</span>
+          <span class="pill">Program Evaluation</span>
         </div>
-       </section>
+      </div>
+    </section>
 
 
     <section id="skills" class="section">
@@ -192,9 +175,9 @@
           <div class="skill-title">Programming</div>
           <ul>
             <li>Python, R, SQL</li>
-            <li>Data cleaning & wrangling</li>
-            <li>EDA & visualization</li>
-            <li>Reproducible workflows </li>
+            <li>Data cleaning &amp; wrangling</li>
+            <li>EDA &amp; visualization</li>
+            <li>Reproducible workflows</li>
           </ul>
         </div>
 
@@ -203,23 +186,21 @@
           <ul>
             <li>Model evaluation</li>
             <li>Neural networks</li>
-            <li>Interpretability concepts </li>
-			<li>Transformer architectures </li>
-			<li>Embedding analysis</li>
-			<li>Multimodal models</li>
-
-
+            <li>Interpretability concepts</li>
+            <li>Transformer architectures</li>
+            <li>Embedding analysis</li>
+            <li>Multimodal models</li>
           </ul>
         </div>
 
         <div class="skill-card">
-          <div class="skill-title">Research & Methods</div>
+          <div class="skill-title">Research &amp; Methods</div>
           <ul>
             <li>Statistical modeling</li>
             <li>Regression</li>
             <li>Experimental design</li>
-			<li>Causal inference</li>
-			<li>Hypothesis testing</li>
+            <li>Causal inference</li>
+            <li>Hypothesis testing</li>
           </ul>
         </div>
 
@@ -228,7 +209,7 @@
           <ul>
             <li>Git/GitHub</li>
             <li>Tableau</li>
-            <li>SPSS </li>
+            <li>SPSS</li>
           </ul>
         </div>
       </div>
@@ -255,4 +236,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
