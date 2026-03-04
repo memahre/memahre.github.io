@@ -40,17 +40,18 @@
 
     <section id="home" class="section">
       <h1>Morgan Mahre</h1>
+    </section>
 
 
     <section id="about" class="section">
       <h1>About</h1>
 
       <p>
-        I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of machine learning and the behavioral and cognitive sciences, where I use statistical and computational methods to study how learning systems represent information and how their behavior can be measured and evaluated.
+        I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of machine learning and the behavioral and cognitive sciences, where I use statistical and computational methods to study how models represent information and how their behavior can be measured and evaluated.
       </p>
 
       <p>
-        My research focuses on the empirical evaluation of modern machine learning models. I work with representation learning, multimodal models, and large-scale datasets to investigate how models encode semantic information and how representations align across modalities.
+        My research focuses on the empirical evaluation of modern machine learning models, such as using representation learning, multimodal models, and large-scale datasets to investigate how models encode semantic information and how representations align across modalities.
       </p>
   
       </p>
@@ -73,6 +74,10 @@
 
       <div class="card">
         <div class="card-title">Multimodal Model Evaluation and Interpretability</div>
+
+        <div class="card-tagline">
+          Study evaluating how audio and vision foundation models represent semantic information across modalities.
+        </div>
 
         <div class="two-col">
           <div>
@@ -101,6 +106,7 @@
         </div>
 
         <div class="meta">
+          <h4>Skills</h4>
           <span class="pill">Python</span>
           <span class="pill">PyTorch</span>
           <span class="pill">DINOv2</span>
@@ -110,10 +116,19 @@
           <span class="pill">CKA</span>
           <span class="pill">RSA</span>
         </div>
+        <div class="resources">
+          <h4>Resource Links</h4>
+          <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank">Code</a>
+          <a class="btn btn-inline" href="#" target="_blank">PDF</a>
+          
       </div>
 
       <div class="card">
         <div class="card-title">Strategic Communication Health Campaign on a College Campus</div>
+        
+        <div class="card-tagline">
+          Study applying behavior change theory and statistical analysis to evaluate the impact of a real-world health intervention.
+        </div>
 
         <div class="two-col">
           <div>
@@ -142,12 +157,17 @@
         </div>
 
         <div class="meta">
+          <h4>Skills</h4>
           <span class="pill">SPSS</span>
           <span class="pill">Survey Research</span>
           <span class="pill">Quantitative Analysis</span>
           <span class="pill">Behavior Change Theory</span>
           <span class="pill">Program Evaluation</span>
         </div>
+          <div class="resources">
+          <h4>Resource Links</h4>
+          <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank">Code</a>
+          <a class="btn btn-inline" href="#" target="_blank">PDF</a>
       </div>
     </section>
 
@@ -155,51 +175,108 @@
   <h1>Projects</h1>
         
   <p class="small">
-    Applied machine learning and data science projects demonstrating model evaluation, statistical analysis, and reproducible research workflows.
+    Selected course and research projects focused on model evaluation, statistical analysis, and reproducible workflows.
   </p>
+
         
   <div class="card">
 
     <div class="card-title">
-      Evaluating Bias in Large Language Models
+      Evaluating Moral Framing Bias in Large Language Models
     </div>
 
     <div class="two-col">
 
       <div>
-        <h4>Problem</h4>
+        <h4>Question</h4>
         <p>
-          Investigated whether large language models exhibit omission versus commission biases in moral decision-making scenarios.
+          Do large language models exhibit the same omission bias observed in human moral psychology, where harmful actions (commissions) are judged as more wrong than equally harmful failures to act (omissions)?
         </p>
 
         <h4>Data</h4>
         <p>
-          Generated prompts based on moral psychology experiments and evaluated model responses across multiple scenarios.
+          Constructed 14 commission–omission minimal pairs based on scenarios from moral psychology experiments. Each scenario was evaluated across four stimulus conditions using the target words “wrong” and “acceptable,” with and without explicit intent framing.
         </p>
       </div>
 
       <div>
         <h4>Method</h4>
         <p>
-          Constructed minimal pair prompts to isolate omission vs. commission framing effects in moral decision scenarios. Model responses were evaluated in Python across paired prompts to identify systematic differences in how language models interpret action versus inaction.
+        Evaluated four autoregressive language models (GPT-2, GPT-2-Medium, GPT-2-Large, and GPT-Neo-125M) using next-token prediction to compute the conditional probability of moral evaluation words. Surprisal scores were used as a measure of implicit moral expectation, comparing how expected “wrong” or “acceptable” was following commission versus omission scenarios.
         </p>
 
         <h4>Result</h4>
         <p>
-          Identified systematic differences in model responses depending on prompt framing, highlighting how evaluation design can influence conclusions about model behavior.
+        Across models and conditions, LLMs did not reproduce the human omission bias. Instead, moral condemnation (“wrong”) was generally more expected following omission scenarios than commission scenarios, indicating that model predictions reflect statistical patterns in language rather than human-like moral reasoning.
+        </p>
+      </div>
+
+      <div class="meta">
+      <h4>Skills</h4>
+      <span class="pill">Python</span>
+      <span class="pill">Transformers</span>
+      <span class="pill">Hugging Face</span>
+      <span class="pill">Prompt Design</span>
+      <span class="pill">Surprisal Analysis</span>
+      <span class="pill">LLM Evaluation</span>
+      <span class="pill">Experimental Design</span> 
+      <span class="pill">Data Visualization</span>
+    </div>
+      <div class="resources">
+      <h4>Resource Links</h4>
+      <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank">Code</a>
+      <a class="btn btn-inline" href="#" target="_blank">PDF</a>
+
+    <div class="card">
+
+    <div class="card-title">
+      Investigating Implicit Bias In Large Language Models
+    </div>
+
+    <div class="two-col">
+
+      <div>
+        <h4>Question</h4>
+        <p>
+         How do model type and social category interact to predict implicit bias in large language models?
+        </p>
+
+        <h4>Data</h4>
+        <p>
+        Replication/extension analysis using Bai et al. (2024) dataset measuring implicit bias in large language models through a prompt-based adaptation of the Implicit Association Test (IAT) based on human psychology. Analyzed a subset of 2,400 observations (300 responses per model) from 8 models across 4 domains (gender, health, race, religion) and 21 stereotype categories. Outcome: <em>iat_bias</em> (−1 to 1).
+        </p>
+      </div>
+
+      <div>
+        <h4>Method</h4>
+        <p>
+        Fit linear regression models in R to estimate one main effects of model and category and two model × category interaction effects. Tested whether prompt variation affected bias estimates and evaluated heteroscedasticity, reporting heteroscedasticity-robust standard errors.
+      </p>
+        </p>
+
+        <h4>Result</h4>
+        <p>
+        Found that implicit bias is highly context-dependent: bias levels vary across specific model–category combinations rather than being uniform across models or domains. The interaction model explained substantially more variance than model-only baselines, and prompt variation did not significantly change the bias patterns beyond the model–category interaction.
         </p>
       </div>
 
     </div>
 
     <div class="meta">
-      <span class="pill">Python</span>
-      <span class="pill">Hugging Face</span>
-      <span class="pill">Machine Learning</span>
-      <span class="pill">Model Evaluation</span>
-      <span class="pill">Data Analysis</span>
-      <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank">Code</a>
+      <h4>Skills</h4>
+      <span class="pill">R</span>
+      <span class="pill">Linear Regression</span>
+      <span class="pill">Interaction Effects</span>
+      <span class="pill">Heteroscedasticity Testing</span>
+      <span class="pill">Data Cleaning</span>
+      <span class="pill">LLM Evaluation</span>
+      <span class="pill">Data Visualization</span>
     </div>
+      <div class="resources">
+      <h4>Resource Links</h4>
+      <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank">Code</a>
+      <a class="btn btn-inline" href="#" target="_blank">PDF</a>
+      
 
   </div>
 
@@ -247,6 +324,8 @@
           <ul>
             <li>Git/GitHub</li>
             <li>Tableau</li>
+            <li>Terminal</li>
+            <li>Terminal</li>
           </ul>
         </div>
       </div>
