@@ -19,7 +19,7 @@
       <div class="name">MORGAN MAHRE</div>
 
       <div class="btn-row">
-        <a class="btn" href="#resume">Resume</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         <a class="btn" href="https://github.com/memahre/" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/morgan-mahre" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:momahre@gmail.com">Email</a>
@@ -49,15 +49,14 @@
       <h1>About</h1>
 
       <p>
-        I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of machine learning and the behavioral and cognitive sciences, where I use statistical and computational methods to study how models represent information and how their behavior can be measured and evaluated.
+        I am a Computational Social Science M.S. student at the University of California, San Diego with a background in psychology and communication. My work sits at the intersection of machine learning and the behavioral and cognitive sciences, where I use statistical and computational methods to study how AI systems behave, where that behavior diverges from human expectations, and whether our evaluation frameworks are actually measuring what we intend them to measure.
       </p>
 
       <p>
-        My research focuses on the evaluation of modern machine learning models, using representation learning, multimodal models, and large-scale datasets to investigate how models encode semantic information and how representations align across modalities.
-      </p>
+        My graduate research focuses on multimodal foundation model evaluation, including cross-modal representation analysis, synthetic data pipeline construction, and behavioral testing of vision and audio models. I am particularly interested in evaluation validity to ask not just whether a metric correlates with performance, but whether it captures the right thing under the right conditions.
 
       <p>
-        More broadly, I am interested in human-centered approaches to machine learning and how careful evaluation, combined with insights from behavioral and cognitive science, can improve our understanding of model behavior and help support the development of more reliable and responsible AI systems.
+        More broadly, I am interested in the gap between how models perform on benchmarks and how they actually behave when they meet real users and real decisions, and am drawn to understanding that gap through more valid evaluation frameworks, more careful attention to what human feedback encodes, and more honest measurement of what models can and cannot do.
       </p>
     </section>
 
@@ -65,7 +64,7 @@
     <section id="resume" class="section">
       <h1>Resume</h1>
       <iframe
-        src="https://drive.google.com/file/d/1mY1E7BTnBBYtzHGEWtTLl0i_qZtIyzvq/preview"
+        src="resume.pdf"
         width="100%"
         height="650"
         style="border: none;"
@@ -79,28 +78,27 @@
 
  
       <div class="card">
-        <div class="card-title">Multimodal Model Evaluation and Interpretability</div>
+        <div class="card-title">Multimodal Foundation Model Evaluation</div>
         <div class="card-tagline">
-          Evaluating how audio and vision foundation models represent semantic information across modalities.
+          Building evaluation pipelines to assess semantic alignment between audio and vision foundation models and examine where cross-modal representations diverge.
         </div>
 
         <div class="two-col">
           <div>
             <h4>Description</h4>
             <p>
-              This project investigates whether vision and audio foundation models develop similar internal representations of semantic concepts. While much multimodal research focuses on language–vision alignment, direct comparisons between auditory and visual models remain limited. Using pretrained vision and audio models, we analyze representational similarity across layers to test whether shared semantic structure emerges across modalities without explicit cross-modal training.
-            </p>
+              While much multimodal research focuses on language–vision or language-audio alignment, direct comparisons between auditory and visual models remain limited. This project builds an end-to-end multimodal evaluation pipeline to assess semantic alignment between audio and vision foundation models using the AudioCaps corpus. The core research question is whether models trained independently on audio and visual data develop similar internal representations of semantic concepts, and what cross-modal divergence reveals about how each model encodes meaning.
 
             <h4>Data</h4>
             <p>
-              Constructed a controlled multimodal dataset using audio clips and captions from the AudioCaps dataset. Corresponding images were generated with Stable Diffusion to ensure consistent semantic content across audio and visual inputs, enabling direct comparison of representations across modalities.
+              Constructed a controlled vision-language evaluation set using a two-stage synthetic data curation pipeline. Audio captions from AudioCaps were expanded into richer visual descriptions using Phi-3, a large language model, and paired images were generated with Stable Diffusion XL. This approach enables direct semantic comparison across modalities with consistent content grounding.
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Extract embeddings from audio and image inputs using pretrained foundation models (BEATs for audio and DINOv2 for vision). Apply representation similarity metrics, including Centered Kernel Alignment (CKA) and Representational Similarity Analysis (RSA), to analyze cross-modal embedding geometry and measure representational alignment across layers and model architectures.
+              Extract audio embeddings using BEATs and image embeddings using DINOv2. Apply layer-wise Representational Similarity Analysis (RSA) and linear predictivity metrics to quantify cross-modal alignment across model layers and surface representation drift across architectures.
             </p>
 
             <h4>Outcome</h4>
@@ -114,10 +112,11 @@
           <span class="pill">PyTorch</span>
           <span class="pill">DINOv2</span>
           <span class="pill">BEATs</span>
+          <span class="pill">Stable Diffusion XL</span>
           <span class="pill">Hugging Face</span>
-          <span class="pill">Diffusion Models</span>
-          <span class="pill">CKA</span>
+          <span class="pill">Linear Predictivity</span>
           <span class="pill">RSA</span>
+          <span class="pill">Multimodal Evaluation</span>
         </div>
 
         <h3>Resource Links</h3>
@@ -186,7 +185,57 @@
         Selected course and research projects focused on model evaluation, statistical analysis, and reproducible workflows.
       </p>
 
-   
+      <div class="card">
+        <div class="card-title">Stress-Testing Bias Mitigation in Text-to-Image Models</div>
+ 
+        <div class="two-col">
+          <div>
+            <h4>Question</h4>
+            <p>
+              Do post-hoc bias mitigation methods for text-to-image models generalize across diffusion architectures, and do their effects remain consistent across prompt domains including stereotyped occupations, authority roles, and historically grounded roles?
+            </p>
+ 
+            <h4>Data</h4>
+            <p>
+              Custom prompt dataset of 16 roles across four categories: female-stereotyped occupations, male-stereotyped occupations, authority and leadership roles, and historically grounded roles. Categories were grounded in prior NLP and generative model bias research. Images were generated individually using Stable Diffusion XL and evaluated using per-image demographic classification with DeepFace.
+            </p>
+          </div>
+ 
+          <div>
+            <h4>Method</h4>
+            <p>
+              Applied FairImagen, a post-hoc bias mitigation framework introduced at NeurIPS 2025, to Stable Diffusion XL — extending the original evaluation from SD3 to a different dual-encoder architecture. Measured gender fairness, age fairness, and prompt-image alignment (CLIPScore) across baseline and FairImagen conditions. Ran a 2×2 hyperparameter sensitivity analysis across hidden dimension and empirical noise settings.
+            </p>
+ 
+            <h4>Result</h4>
+            <p>
+              FairImagen's gender fairness improvements did not generalize consistently to SDXL. Only female-stereotyped roles showed improvement (0.38 to 0.62), while authority and male-stereotyped roles showed no change. An unexpected finding was that age fairness improved across all four categories — including those where gender fairness was unchanged — suggesting FairPCA projection affects demographic attributes beyond its intended targets. Prompt-image alignment remained stable, indicating semantic fidelity was preserved. Results suggest FairImagen is architecture-dependent and its effects may be broader than intended.
+            </p>
+          </div>
+        </div>
+ 
+        <h3>Skills</h3>
+        <div class="meta">
+          <span class="pill">Python</span>
+          <span class="pill">Stable Diffusion XL</span>
+          <span class="pill">FairImagen</span>
+          <span class="pill">FairPCA</span>
+          <span class="pill">DeepFace</span>
+          <span class="pill">CLIPScore</span>
+          <span class="pill">Bias Evaluation</span>
+          <span class="pill">Generative Model Evaluation</span>
+          <span class="pill">Experimental Design</span>
+          <span class="pill">Data Visualization</span>
+        </div>
+ 
+        <h3>Resource Links</h3>
+        <div class="resources">
+          <a class="btn btn-inline" href="https://github.com/YOUR_REPO_LINK" target="_blank" rel="noopener">Code</a>
+          <a class="btn btn-inline" href="#" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </div>
+
+      
       <div class="card">
         <div class="card-title">Evaluating Moral Framing Bias in Large Language Models</div>
 
@@ -302,11 +351,14 @@
         <div class="skill-card">
           <div class="skill-title">Machine Learning</div>
           <ul>
-            <li>Model evaluation</li>
-            <li>Neural networks</li>
-            <li>Transformer architectures</li>
+            <li>Foundation model evaluation</li>
+            <li>Behavioral testing</li>
+            <li>Cross-modal benchmarking</li>
+            <li>Representation analysis (CKA, RSA, linear predictivity</li>
             <li>Embedding analysis</li>
+            <li>Transformer analysis</li>
             <li>Multimodal models</li>
+            <li>Data quality assessment</li>
           </ul>
         </div>
 
@@ -318,6 +370,7 @@
             <li>Experimental design</li>
             <li>Causal inference</li>
             <li>Hypothesis testing</li>
+            <li>Construct validity</li>
           </ul>
         </div>
 
@@ -325,7 +378,11 @@
           <div class="skill-title">Tools</div>
           <ul>
             <li>Git/GitHub</li>
+            <li>Jupyter</li>
+            <li>Hugging Face Transformers</li>
+            <li>Stable Diffusion XL</li>
             <li>Tableau</li>
+            <li>Excel</li>
           </ul>
         </div>
       </div>
@@ -337,7 +394,6 @@
 
       <div class="card">
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:momahre@gmail.com">momahre@gmail.com</a></li>
           <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/morgan-mahre" target="_blank" rel="noopener">linkedin.com/in/morgan-mahre</a></li>
           <li><strong>GitHub:</strong> <a href="https://github.com/memahre/" target="_blank" rel="noopener">github.com/memahre</a></li>
         </ul>
