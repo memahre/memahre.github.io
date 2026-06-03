@@ -53,11 +53,7 @@
       </p>
 
       <p>
-        My graduate research focuses on multimodal foundation model evaluation, including cross-modal representation analysis, synthetic data pipeline construction, and behavioral testing of vision and audio models. I am particularly interested in evaluation validity to ask not just whether a metric correlates with performance, but whether it captures the right thing under the right conditions.
-
-      <p>
-        More broadly, I am interested in the gap between how models perform on benchmarks and how they actually behave when they meet real users and real decisions, and am drawn to understanding that gap through more valid evaluation frameworks, more careful attention to what human feedback encodes, and more honest measurement of what models can and cannot do.
-      </p>
+       My graduate research focuses on multimodal foundation model evaluation and behavioral testing across vision, audio, and language models. I am particularly interested in whether our evaluations actually capture what we intend them to, not just whether a model performs well on a benchmark, but whether that performance holds under the right conditions and whether the systems we build actually reflect human values and reasoning in the ways we intend them to.
     </section>
 
  
@@ -80,29 +76,30 @@
       <div class="card">
         <div class="card-title">Multimodal Foundation Model Evaluation</div>
         <div class="card-tagline">
-          Building evaluation pipelines to assess semantic alignment between audio and vision foundation models and examine where cross-modal representations diverge.
+          Measuring cross-modal representational alignment across vision, audio, and language foundation models to examine where and how shared structure emerges across transformer architectures.
         </div>
 
         <div class="two-col">
           <div>
             <h4>Description</h4>
             <p>
-              While much multimodal research focuses on language–vision or language-audio alignment, direct comparisons between auditory and visual models remain limited. This project builds an end-to-end multimodal evaluation pipeline to assess semantic alignment between audio and vision foundation models using the AudioCaps corpus. The core research question is whether models trained independently on audio and visual data develop similar internal representations of semantic concepts, and what cross-modal divergence reveals about how each model encodes meaning.
-
+              While much multimodal research focuses on language–vision or language-audio alignment, direct comparisons between auditory and visual models remain limited. This project examines whether independently trained vision and audio models develop shared representational structure on semantically paired inputs, and how that alignment compares to vision-language and audio-language alignment. Using a controlled dataset of 620 paired audio-image samples from AudioCaps 2.0, we apply layer-wise RSA and linear predictivity across all modality pairs to surface where cross-modal convergence emerges.
             <h4>Data</h4>
             <p>
-              Constructed a controlled vision-language evaluation set using a two-stage synthetic data curation pipeline. Audio captions from AudioCaps were expanded into richer visual descriptions using Phi-3, a large language model, and paired images were generated with Stable Diffusion XL. This approach enables direct semantic comparison across modalities with consistent content grounding.
+              620 semantically paired audio-image samples from AudioCaps 2.0. Images were constructed two ways: naturalistic middle frames extracted from source video files, and synthetic images generated with Stable Diffusion XL using captions expanded by Phi-3-mini. This comparison directly tests whether caption-conditioned synthetic images produce stronger alignment with audio than naturalistic frames.
             </p>
           </div>
 
           <div>
             <h4>Method</h4>
             <p>
-              Extract audio embeddings using BEATs and image embeddings using DINOv2. Apply layer-wise Representational Similarity Analysis (RSA) and linear predictivity metrics to quantify cross-modal alignment across model layers and surface representation drift across architectures.
+              Layer-wise embeddings extracted from DINOv2-large and DINOv2-base (vision), BEATs-iter3 and BEATs-iter3+ (audio), and Qwen3-1.7B (language). Cross-modal alignment measured using Representational Similarity Analysis (RSA) and bidirectional linear predictivity with 5-fold cross-validation across all layer combinations and modality pairs.
             </p>
 
             <h4>Outcome</h4>
-            <p>In progress.</p>
+            <p>
+              Vision and audio models show meaningful alignment without joint training, emerging in mid-to-late layers across all model combinations. Language was the strongest cross-modal bridge (vision-language r = 0.402, audio-language r = 0.357) compared to direct vision-audio alignment (r = 0.295). Supervised audio pre-training (BEATs-iter3+) consistently outperformed self-supervised BEATs-iter3 (Δr ≈ +0.055), while vision model capacity had no consistent effect.
+            </p>
           </div>
         </div>
 
@@ -112,6 +109,7 @@
           <span class="pill">PyTorch</span>
           <span class="pill">DINOv2</span>
           <span class="pill">BEATs</span>
+          <span class="pill">Qwen3</span>
           <span class="pill">Stable Diffusion XL</span>
           <span class="pill">Hugging Face</span>
           <span class="pill">Linear Predictivity</span>
@@ -121,7 +119,7 @@
 
         <h3>Resource Links</h3>
         <div class="resources">
-          <span class="coming-soon">Code and paper coming soon</span>
+          <a href="https://github.com/memahre" target="_blank">Code</a>
         </div>
       </div>
     </section>
